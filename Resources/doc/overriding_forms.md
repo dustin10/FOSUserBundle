@@ -269,7 +269,7 @@ Or if you prefer YAML:
 services:
     acme_user.form.handler.registration:
         class: Acme\UserBundle\Form\Handler\RegistrationFormHandler
-        arguments: ["@fos_user.registration.form", "@request", "@fos_user.user_manager", "@fos_user.mailer"]
+        arguments: ["@fos_user.registration.form", "@request", "@fos_user.user_manager", "@fos_user.mailer", "@fos_user.util.token_generator.default"]
         scope: request
         public: false
 ```
